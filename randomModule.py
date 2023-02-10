@@ -111,3 +111,37 @@ for i in range(5):
 
 dices.sort()
 print(dices)
+
+#Ex6
+print("------------------")
+colors = ['Hearts','Diamonds','Clubs','Spades']
+
+figures = ['Ace','King','Queen','Jack','10','9']
+
+allCards = []
+
+for i in colors:
+    for j in figures:
+        allCards.append(i)
+        allCards.append(j)
+
+random.shuffle(allCards)
+
+player1 = []
+player2 = []
+
+#1 approach
+
+max = len(allCards)
+
+for i in range(max-1):
+    if (i %2==0):
+        player1.append(allCards[i])
+    else:
+        player2.append(allCards[i])
+print(player1)
+print(player2)
+
+#2 approach
+player1 = allCards[:12]
+player2 = allCards[12:]
