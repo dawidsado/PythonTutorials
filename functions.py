@@ -54,3 +54,31 @@ def getDaysTillEnd():
 
 getDaysTillEnd()
 
+#Ex3
+
+def printAnimal(animal):
+    if animal == "cat":
+        printCat()
+    elif animal == "bear":
+        printBear()
+    elif animal == "bat":
+        printBat()
+    else:
+        print("Cannot print",animal,"Correct values for the parameter are: cat, bear, bat")
+        return
+
+printAnimal("cat")
+
+#Ex4
+
+def getDaysTillEnd(year, month, day):
+
+    given_date = datetime.date(year,month,day)
+
+    date_end_year = datetime.date(year,12,31)
+
+    delta = (date_end_year - given_date).days
+    print(delta)
+    return
+
+getDaysTillEnd(2023,2,18)
